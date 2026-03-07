@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: demo-template
+  annotations:
+    scenarios.ai.sap.com/name: demo-scenario
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      container:
+        image: python:3.10
+        command: ["python"]
+        args: ["-c", "print('Hello AI Core')"]
