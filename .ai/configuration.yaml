@@ -1,8 +1,0 @@
-apiVersion: ai.sap.com/v1alpha1
-kind: Configuration
-metadata:
-  name: demo-config
-  scenario: demo-scenario
-spec:
-  executable:
-    image: docker.io/library/python:3.10
