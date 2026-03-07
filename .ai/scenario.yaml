@@ -1,6 +1,17 @@
 apiVersion: ai.sap.com/v1alpha1
-kind: Scenario
+kind: ServingTemplate
 metadata:
-  name: demo-scenario
+  name: demo-serving-template
+  annotations:
+    # THIS IS WHAT CREATES THE SCENARIO IN THE UI
+    scenarios.ai.sap.com/id: "demo-scenario"
+    scenarios.ai.sap.com/name: "My Demo Scenario"
+    executables.ai.sap.com/id: "demo-executable"
+    executables.ai.sap.com/name: "Demo Executable"
 spec:
-  description: Demo scenario
+  inputs:
+    parameters:
+      - name: modelName
+        type: string
+  template:
+    # Your container details go here
