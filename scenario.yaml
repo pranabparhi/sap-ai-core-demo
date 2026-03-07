@@ -1,4 +1,4 @@
-apiVersion: ai.sap.com/v1alpha1
+apiVersion: ai.sap.com/v1
 kind: Scenario
 metadata:
   name: demo-scenario
