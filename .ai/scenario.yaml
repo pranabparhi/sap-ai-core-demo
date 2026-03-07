@@ -1,12 +1,11 @@
 apiVersion: ai.sap.com/v1alpha1
-kind: WorkflowTemplate  # Changed from 'Scenario' to 'WorkflowTemplate' for training
+kind: WorkflowTemplate
 metadata:
   name: demo-training-workflow
   annotations:
-    # These annotations are what actually create the Scenario in Launchpad
     scenarios.ai.sap.com/id: "demo-scenario"
-    scenarios.ai.sap.com/name: "My Training Scenario"
-    executables.ai.sap.com/id: "train-executable"
+    scenarios.ai.sap.com/name: "Demo Scenario"
+    executables.ai.sap.com/id: "train"
     executables.ai.sap.com/name: "Train Executable"
 spec:
   templates:
@@ -14,4 +13,4 @@ spec:
       container:
         image: "alpine:latest"
         command: ["/bin/sh", "-c"]
-        args: ["echo 'Training executable sync test'"]
+        args: ["echo 'Hello SAP AI Core'"]
