@@ -5,7 +5,7 @@ metadata:
   annotations:
     scenarios.ai.sap.com/id: "demo-scenario"
     scenarios.ai.sap.com/name: "Demo Scenario"
-    executables.ai.sap.com/id: "train"
+    executables.ai.sap.com/id: "train-executable"
     executables.ai.sap.com/name: "Train Executable"
 spec:
   templates:
