@@ -2,6 +2,7 @@ apiVersion: ai.sap.com/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: caig-certification-test-v1
+  namespace: default # Explicitly adding this can sometimes kickstart the parser
   annotations:
     scenarios.ai.sap.com/id: "learning-scenario"
     scenarios.ai.sap.com/name: "Learning Journey Scenario"
