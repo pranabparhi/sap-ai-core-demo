@@ -3,4 +3,4 @@ kind: Scenario
 metadata:
   name: demo-scenario
 spec:
-  description: First AI Core scenario
+  description: Demo scenario
