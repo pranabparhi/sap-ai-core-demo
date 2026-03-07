@@ -1,16 +1,16 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: cert-test-unique-v3  # Do not use 'demo-training-workflow' again
+  name: caig-certification-test-v1
   annotations:
-    scenarios.ai.sap.com/id: "scenario-v3"
-    scenarios.ai.sap.com/name: "New Scenario V3"
-    executables.ai.sap.com/id: "exec-v3"
-    executables.ai.sap.com/name: "New Executable V3"
+    scenarios.ai.sap.com/id: "learning-scenario"
+    scenarios.ai.sap.com/name: "Learning Journey Scenario"
+    executables.ai.sap.com/id: "learning-exec"
+    executables.ai.sap.com/name: "Learning Executable"
 spec:
   templates:
     - name: main
       container:
         image: "alpine:latest"
         command: ["/bin/sh", "-c"]
-        args: ["echo 'Force Sync'"]
+        args: ["echo 'Sync Success'"]
