@@ -1,9 +1,0 @@
-apiVersion: ai.sap.com/v1alpha1
-kind: Executable
-metadata:
-  name: train
-spec:
-  scenario: demo-scenario
-  container:
-    image: python:3.9
-    command: ["python", "-c", "print('Hello AI Core')"]
