@@ -1,0 +1,13 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: Executable
+metadata:
+  name: demo-executable
+spec:
+  scenario: demo-scenario
+  description: Demo execution
+  image: docker.io/library/python:3.9
+  command:
+    - python
+  args:
+    - -c
+    - "print('Hello from AI Core')"
