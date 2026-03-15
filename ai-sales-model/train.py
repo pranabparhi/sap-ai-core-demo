@@ -3,7 +3,7 @@ from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 import pickle
 
-# Load data
+# Load data.
 data = pd.read_csv("ai-sales-model/Advertising.csv")
 
 # Split data
