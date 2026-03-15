@@ -37,7 +37,11 @@ print("Actual:", list(y_test.values))
 print("Predicted:", list(predictions))
 
 from sklearn.metrics import r2_score, mean_squared_error
+import numpy as np
+
 print("R2:", r2_score(y_test, predictions))
-print("RMSE:", mean_squared_error(y_test, predictions, squared=False))
+
+rmse = np.sqrt(mean_squared_error(y_test, predictions))
+print("RMSE:", rmse)
 
 print("Training complete")
