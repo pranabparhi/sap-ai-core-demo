@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pickle
 
 # Load data
-data = pd.read_csv("Advertising.csv")
+data = pd.read_csv("ai-sales-model/Advertising.csv")
 
 # Split data
 train = data.iloc[:130]
