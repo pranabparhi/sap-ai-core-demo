@@ -23,3 +23,7 @@ spec:
         - python
       args:
         - train.py
+    outputs:
+      artifacts:
+        - name: results
+          path: /app/test_results.png
