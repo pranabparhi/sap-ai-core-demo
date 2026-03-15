@@ -19,3 +19,7 @@ spec:
   - name: train
     container:
       image: docker.io/pranabparhi/sales-prediction-model:1
+      command:
+        - python
+      args:
+        - train.py
