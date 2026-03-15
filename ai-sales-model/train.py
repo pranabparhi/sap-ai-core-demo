@@ -33,7 +33,7 @@ plt.plot(y_test.values,label="Actual")
 plt.plot(predictions,label="Predicted")
 plt.legend()
 plt.title("Test Data: Actual vs Predicted Sales")
-# plt.savefig("test_results.png")
+plt.savefig("test_results.png")
 plt.show()
 
 print("Training complete")
