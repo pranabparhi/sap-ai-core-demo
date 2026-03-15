@@ -34,6 +34,6 @@ plt.plot(predictions,label="Predicted")
 plt.legend()
 plt.title("Test Data: Actual vs Predicted Sales")
 print("Actual:", list(y_test.values))
-print("Predicted:", list(pred))
+print("Predicted:", list(predictions))
 
 print("Training complete")
