@@ -29,4 +29,4 @@ spec:
       args:
         - |
           pip install pandas scikit-learn matplotlib
-          python train.py
+          python ai-sales-model/train.py
