@@ -23,10 +23,7 @@ spec:
       image: docker.io/python:3.10
 
       command:
-        - sh
-        - -c
+        - python
 
       args:
-        - |
-          pip install pandas scikit-learn matplotlib
-          python ai-sales-model/train.py
+        - train.py
