@@ -36,4 +36,8 @@ plt.title("Test Data: Actual vs Predicted Sales")
 print("Actual:", list(y_test.values))
 print("Predicted:", list(predictions))
 
+from sklearn.metrics import r2_score, mean_squared_error
+print("R2:", r2_score(y_test, predictions))
+print("RMSE:", mean_squared_error(y_test, predictions, squared=False))
+
 print("Training complete")
