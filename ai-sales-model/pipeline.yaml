@@ -11,24 +11,29 @@ metadata:
     scenarios.ai.sap.com/id: "sales-prediction-scenario"
     ai.sap.com/version: "1.2"
 
-
 spec:
-  entrypoint: train
+  entrypoint: main
 
   templates:
-  
-  - name: train
-    container:
-      image: docker.io/pranabparhi/sales-prediction-model:1
-      command:
-        - python
-      args:
-        - train.py
 
-  - name: predict
-    container:
-      image: docker.io/pranabparhi/sales-prediction-model:2
-      command:
-        - python
-      args:
-        - predict.py
+    - name: main
+      dag:
+        tasks:
+          - name: train
+            template: train
+
+          - name: predict
+            template: predict
+            dependencies: [train]
+
+    - name: train
+      container:
+        image: docker.io/pranabparhi/sales-prediction-model:1
+        command: ["python"]
+        args: ["train.py"]
+
+    - name: predict
+      container:
+        image: docker.io/pranabparhi/sales-prediction-model:2
+        command: ["python"]
+        args: ["predict.py"]
