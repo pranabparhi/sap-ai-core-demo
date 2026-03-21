@@ -10,7 +10,7 @@ metadata:
 
   labels:
     scenarios.ai.sap.com/id: "sales-prediction-scenario"
-    ai.sap.com/version: "1.0"
+    ai.sap.com/version: "1.1"
 
 spec:
   entrypoint: train
