@@ -16,6 +16,7 @@ spec:
   entrypoint: train
 
   templates:
+  
   - name: train
     container:
       image: docker.io/pranabparhi/sales-prediction-model:1
@@ -25,12 +26,9 @@ spec:
         - train.py
 
   - name: predict
-  
     container:
       image: docker.io/pranabparhi/sales-prediction-model:2
-  
       command:
         - python
-  
       args:
         - predict.py
