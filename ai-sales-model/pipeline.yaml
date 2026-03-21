@@ -6,7 +6,12 @@ metadata:
 
   annotations:
     scenarios.ai.sap.com/name: "Sales Prediction"
-    executables.ai.sap.com/name: "Train Sales Model"
+  # REMOVE this line:
+  # executables.ai.sap.com/name: "Train Sales Model"
+  # ADD THIS:
+    executables.ai.sap.com/names: |
+      train
+      predict
 
   labels:
     scenarios.ai.sap.com/id: "sales-prediction-scenario"
