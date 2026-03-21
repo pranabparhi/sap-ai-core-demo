@@ -30,10 +30,10 @@ spec:
       container:
         image: docker.io/pranabparhi/sales-prediction-model:1
         command: ["python"]
-        args: ["train.py"]
+        args: args: ["ai-sales-model/train.py"]
 
     - name: predict
       container:
         image: docker.io/pranabparhi/sales-prediction-model:2
         command: ["python"]
-        args: ["predict.py"]
+        args: ["ai-sales-model/predict.py"]
