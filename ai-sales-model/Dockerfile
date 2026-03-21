@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 RUN chmod -R 777 /app
 
-CMD ["python","train.py"]
+CMD ["python","train.py","predict.py"]
