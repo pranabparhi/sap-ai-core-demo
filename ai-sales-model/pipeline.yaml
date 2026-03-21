@@ -23,3 +23,14 @@ spec:
         - python
       args:
         - train.py
+
+  - name: predict
+  
+    container:
+      image: docker.io/pranabparhi/sales-prediction-model:2
+  
+      command:
+        - python
+  
+      args:
+        - predict.py
