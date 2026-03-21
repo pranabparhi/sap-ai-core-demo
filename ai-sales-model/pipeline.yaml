@@ -6,35 +6,19 @@ metadata:
 
   annotations:
     scenarios.ai.sap.com/name: "Sales Prediction"
-    executables.ai.sap.com/name: "train"
+    executables.ai.sap.com/name: "Train Sales Model"
 
   labels:
     scenarios.ai.sap.com/id: "sales-prediction-scenario"
-    ai.sap.com/version: "1.4"
+    ai.sap.com/version: "1.0"
 
 spec:
-  entrypoint: main
+  entrypoint: train
 
   templates:
-
-    - name: main
-      dag:
-        tasks:
-          - name: train
-            template: train
-
-          - name: predict
-            template: predict
-            dependencies: [train]
 
     - name: train
       container:
         image: docker.io/pranabparhi/sales-prediction-model:1
         command: ["python"]
-        args: args: ["ai-sales-model/train.py"]
-
-    - name: predict
-      container:
-        image: docker.io/pranabparhi/sales-prediction-model:2
-        command: ["python"]
-        args: ["ai-sales-model/predict.py"]
+        args: ["train.py"]
