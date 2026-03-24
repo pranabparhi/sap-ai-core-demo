@@ -2,6 +2,8 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 import pickle
+import matplotlib
+matplotlib.use("Agg")
 
 # Load data...
 data = pd.read_csv("Advertising.csv")
