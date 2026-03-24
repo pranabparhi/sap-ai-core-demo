@@ -1,3 +1,28 @@
+# apiVersion: argoproj.io/v1alpha1
+# kind: WorkflowTemplate
+
+# metadata:
+#   name: sales-training-pipeline
+
+#   annotations:
+#     scenarios.ai.sap.com/name: "Sales Prediction"
+#     executables.ai.sap.com/name: "Train Sales Model"
+
+#   labels:
+#     scenarios.ai.sap.com/id: "sales-prediction-scenario"
+#     ai.sap.com/version: "1.0"
+
+# spec:
+#   entrypoint: train
+
+#   templates:
+
+#     - name: train
+#       container:
+#         image: docker.io/pranabparhi/sales-prediction-model:1
+#         command: ["python"]
+#         args: ["train.py"]
+
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 
@@ -22,3 +47,8 @@ spec:
         image: docker.io/pranabparhi/sales-prediction-model:1
         command: ["python"]
         args: ["train.py"]
+
+      outputs:
+        artifacts:
+          - name: model
+            path: /app/model.pkl
