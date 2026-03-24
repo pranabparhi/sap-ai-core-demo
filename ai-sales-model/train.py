@@ -4,6 +4,8 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pickle
+from sklearn.metrics import r2_score, mean_squared_error
+import numpy as np
 
 # Load data...
 data = pd.read_csv("Advertising.csv")
@@ -42,8 +44,6 @@ plt.title("Test Data: Actual vs Predicted Sales")
 print("Actual:", list(y_test.values))
 print("Predicted:", list(predictions))
 
-from sklearn.metrics import r2_score, mean_squared_error
-import numpy as np
 
 print("R2:", r2_score(y_test, predictions))
 
