@@ -18,8 +18,12 @@ X_test = test[["TV","Radio","Newspaper"]]
 y_test = test["Actual Sales"]
 
 # Train model
-model = LinearRegression()
-model.fit(X_train, y_train)
+# model = LinearRegression()
+# model.fit(X_train, y_train)
+with open("/app/model.pkl","wb") as f:
+    pickle.dump(model,f)
+print("Model saved at /app/model.pkl")
+
 
 # Predict test data
 predictions = model.predict(X_test)
